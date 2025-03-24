@@ -16,14 +16,20 @@
     <div class="row">
         {% for product in products %}
         <div class="col-sm-2 card text-center shadow-sm mx-3">
+            <!-- 1.card - Main card container and creat card
+                2. shadow-sm -is a utility class that adds a small box shadow to elements
+                3.mx - is a spacing utility used to set horizontal margins (m for margin, x for horizontal). -->
             <div class="row h-50">
                 <img class="card-img-top" src="{{product.img.url}}" alt="picture of {{product.name}}">
+                <!-- card-img-top - class in Bootstrap is used to place an image at the top of a card. -->
             </div>
             <div class="row card-body h-50">
+                <!-- card-body - Adds padding inside the card. helps in structuring the card's content. -->
                 <h5>
                     {{product.name}}
                 </h5>
                 <p class="card-text">
+                    <!-- card-text - It provides proper spacing and typography settings to make the text more readable. -->
                     Rs. {{product.price}}
                 </p>
                 <p class="card-caption">
