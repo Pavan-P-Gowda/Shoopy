@@ -10,7 +10,7 @@ def homeView(request):
     template = loader.get_template('home.html')
     context = {
         # context data to be pulled from the db
-        'product' : Product.objects.all()
+        'products' : Product.objects.all()
         #the above line of the code is equivalent to Select * from product_table; 
 
     }
