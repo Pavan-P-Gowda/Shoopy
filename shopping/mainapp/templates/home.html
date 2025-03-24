@@ -5,5 +5,11 @@
  {% endblock %}
 
  {% block content %}
- this is my page
+ <ol>
+    {% for product in products %}
+    <li>
+        {{product.name}} - Rs.{{product.price}}
+    </li>
+    {% endfor %}
+ </ol>
  {% endblock %}
