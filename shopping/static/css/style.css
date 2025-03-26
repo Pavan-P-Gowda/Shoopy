@@ -6,11 +6,45 @@
 body{
     header#site-header{
         height: 20px;
+        nav{
+            background-color:rgb(72, 195, 72) ;
+            .container-fluid{
+                a{
+                    color: white;
+                }
+                .active{
+                    /* background-color:black; */
+                    /* color:black; */
+                }
+                a:hover{
+                    /* background-color:black; */
+                    color:black;
+                }
+            }
+            form{
+                button{
+                    background-color: white;
+                    color: black;
+                }
+                .active{
+                    background-color:black;
+                    color:white;
+                }
+                button:hover{
+                    background-color:black;
+                    color:white;
+                }
+            }
+            .dropdown-menu{
+                background-color: rgb(72, 195, 72);
+            }
+        }
     }
     main {
         margin: auto;
-        margin-top: 60px;
+        margin-top: 40px;
         max-width: 80%;
+        margin-bottom: 40px;
 
         /* home page */
         .container {
@@ -20,6 +54,7 @@ body{
                     height: 380px;
                     display: flex;
                     align-items: center;
+                    border-radius: 5px;
                     .row {
                         height: 50%;
                         img {
@@ -31,19 +66,29 @@ body{
                         }
                         
                     }
+                    .card-body{
+                        h5{
+                            a{
+                                text-decoration: none;
+                                color: black;
+                                
+                            }
+                        }
+                    }
                     a.btn {
                         font-size: smaller;
                         margin-bottom: 5px;
-                        background-color: rgb(44, 222, 222);
-                        border-color:rgb(44, 222, 222) ;
+                        /* margin-top: 5px; */
+                        background-color: rgb(72, 195, 72);
+                        border-color:rgb(72, 195, 72) ;
                     }
                     .active {
                         background-color: white;
-                        color:rgb(44, 222, 222) ;
+                        color:rgb(72, 195, 72) ;
                     }
                     a:hover{
                         background-color: white;
-                        color:rgb(44, 222, 222) ;
+                        color:rgb(72, 195, 72) ;
                     }
                 }
                 .card:hover{
@@ -63,6 +108,10 @@ body{
         }
 
         /* about page */
+    }
+    footer{
+        background-color: rgb(72, 195, 72);
+        color: black;
     }
 }
 
