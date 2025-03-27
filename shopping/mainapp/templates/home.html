@@ -26,7 +26,7 @@
             <div class="row card-body h-50">
                 <!-- card-body - Adds padding inside the card. helps in structuring the card's content. -->
                 <h5>
-                    <a href="">{{product.name}}</a>
+                    <a href="{% url 'product_details' product.pk %}">{{product.name}}</a>
                 </h5>
                 <p class="card-text">
                     <!-- card-text - It provides proper spacing and typography settings to make the text more readable. -->

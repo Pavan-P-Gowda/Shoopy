@@ -4,10 +4,16 @@
     box-sizing: border-box;
 }
 body{
+    /* overflow: hidden; */
     header#site-header{
         height: 20px;
+        /* z-index: 10; */
+        /* overflow: hidden; */
+        /* position: fixed; */
         nav{
             background-color:rgb(72, 195, 72) ;
+            /* position: fixed;
+            width: 100%; */
             .container-fluid{
                 a{
                     color: white;
@@ -44,10 +50,12 @@ body{
         margin: auto;
         margin-top: 40px;
         max-width: 80%;
-        margin-bottom: 40px;
+        margin-bottom: 20px;
+        /* overflow: hidden; */
 
         /* home page */
         .container {
+            /* overflow: hidden; */
             .row {
                 .card {
                     box-shadow: 2px 2px 2px 1px rgb(14, 77, 76);
@@ -55,6 +63,8 @@ body{
                     display: flex;
                     align-items: center;
                     border-radius: 5px;
+                    z-index: -5;
+                    /* overflow: hidden; */
                     .row {
                         height: 50%;
                         img {
