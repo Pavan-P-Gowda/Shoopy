@@ -1,60 +1,78 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body{
+
+body {
+    margin-top: 35px;
     /* overflow: hidden; */
-    header#site-header{
+    header#site-header {
         height: 20px;
-        /* z-index: 10; */
+        z-index: 10;
+        top:0;
+        position: fixed;
+
         /* overflow: hidden; */
         /* position: fixed; */
-        nav{
-            background-color:rgb(72, 195, 72) ;
+        nav {
+            background-color: rgb(72, 195, 72);
+
             /* position: fixed;
             width: 100%; */
-            .container-fluid{
-                a{
+            .container-fluid {
+                a {
                     color: white;
                 }
-                .active{
+
+                .active {
                     /* background-color:black; */
-                    color:black;
+                    color: black;
                 }
-                a:hover{
+
+                a:hover {
                     /* background-color:black; */
-                    color:black;
+                    color: black;
                 }
             }
-            form{
-                button{
+
+            form {
+                button {
                     background-color: white;
                     color: black;
                 }
-                .active{
-                    background-color:black;
-                    color:white;
+
+                .active {
+                    background-color: black;
+                    color: white;
                 }
-                button:hover{
-                    background-color:black;
-                    color:white;
+
+                button:hover {
+                    background-color: black;
+                    color: white;
                 }
             }
-            .dropdown-menu{
+
+            .dropdown-menu {
                 background-color: rgb(72, 195, 72);
             }
         }
     }
+
     main {
         margin: auto;
         margin-top: 40px;
         max-width: 80%;
         margin-bottom: 20px;
-        /* overflow: hidden; */
+        z-index: 0;
+        position: static;
+        overflow: hidden;
+        /* border: 1px solid black; */
+        padding-top: 10px;
 
         /* home page */
         .container {
+
             /* overflow: hidden; */
             .row {
                 .card {
@@ -63,66 +81,86 @@ body{
                     display: flex;
                     align-items: center;
                     border-radius: 5px;
-                    z-index: -5;
+                    z-index: 0;
+                    position: static;
+                    overflow: hidden;
+
                     /* overflow: hidden; */
                     .row {
                         height: 50%;
+                        overflow: hidden;
+                        padding: 0;
                         img {
                             height: 150px;
-                            object-fit: fill;
+                            object-fit: cover;
+                            padding: 0;
                             /* overflow: hidden; */
                             /* width: 200px; */
                             background-color: black;
                         }
-                        
+
                     }
-                    .card-body{
-                        h5{
-                            a{
+
+                    .card-body {
+                        h5 {
+                            a {
                                 text-decoration: none;
                                 color: black;
-                                
+
+                            }
+                            .active{
+                                /* background-color: white; */
+                                color:rgb(72, 195, 72);
+                            }
+                            a:hover{
+                                /* background-color: white; */
+                                color:rgb(72, 195, 72);
                             }
                         }
                     }
+
                     a.btn {
                         font-size: smaller;
                         margin-bottom: 5px;
                         /* margin-top: 5px; */
                         background-color: rgb(72, 195, 72);
-                        border-color:rgb(72, 195, 72) ;
+                        border-color: rgb(72, 195, 72);
+                        border-radius: 5px;
                     }
+
                     .active {
                         background-color: white;
-                        color:rgb(72, 195, 72) ;
+                        color: rgb(72, 195, 72);
                     }
-                    a:hover{
+
+                    a:hover {
                         background-color: white;
-                        color:rgb(72, 195, 72) ;
+                        color: rgb(72, 195, 72);
                     }
                 }
-                .card:hover{
+
+                .card:hover {
                     /* background-color: black;
                     color: turquoise;
                     box-shadow: 0px 0px;
-                    transform: scale(1.1);
-                    transition-duration: 300ms; */
+                    transform: scale(1.1);*/
+                    transition-duration: 300ms;
                 }
             }
         }
-        .clamp {
+
+        /* .clamp {
             display: -webkit-box;
             -webkit-box-orient: vertical;
             -webkit-line-clamp: 2;
             overflow: hidden;
-        }
+        } */
 
         /* about page */
     }
-    footer{
+
+    footer {
         background-color: rgb(72, 195, 72);
         color: black;
     }
 }
-
-
