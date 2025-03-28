@@ -4,7 +4,7 @@ from django.template import loader
 
 from django.http import HttpResponse
  
-from django.views.generic import DetailView
+from django.views.generic import ListView,DetailView, CreateView, UpdateView ,DeleteView
 
 from .models import Product
 # Create your views here.
@@ -31,3 +31,14 @@ def contactView(request):
     template = loader.get_template('contact.html')
     context = {}
     return HttpResponse(template.render(context, request))
+
+# crud operations
+
+#read operations we already exploxed above
+#lets explre the other
+
+class AddProduct(CreateView):
+    model = Product
+    template_name = 'add_product.html'
+    fields = '__all__'
+    success_url ='/'
