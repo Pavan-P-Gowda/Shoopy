@@ -7,7 +7,7 @@ Details : {{product.name}}
 <div class="container px-10">
     <div class="row">
         <div class="col">
-            <img class="w-100" src="{{product.img.url}}" alt="">
+            <img class="w-100 h-50" src="{{product.img.url}}" alt="">
         </div>
         <div class="col">
             <div class="row">
@@ -20,7 +20,10 @@ Details : {{product.name}}
                 <p>
                     {{product.desc}}
                 </p>
-                <a href="" class="btn btn-primary w-50 center">Add to cart</a>
+                <p class="my-3 mx-10 ">
+                <a href="" class="btn btn-primary w-30 center">Add to cart</a>
+                <a href="{% url 'edit_product' product.pk %}" class="btn btn-secondary w-30 center">Edit Product</a>
+                <a href="{% url 'delete_product' product.pk %}" class="btn btn-danger w-60 center">Delete</a></p>
             </div>
         </div>
     </div>
