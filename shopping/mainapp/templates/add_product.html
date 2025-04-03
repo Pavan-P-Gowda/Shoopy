@@ -8,7 +8,9 @@ Add products
 <div>
     <form method="post" enctype="multipart/form-data">
         {% csrf_token %}
-        {{form.as_p}}
+        {{form.as_p}}   
+        <!--  form - is importing from models everything 
+          each attribut is from the module it will come inside this as paragraph -->
         <button type="submit" class="btn btn-primary">Add</button>
     </form>
 </div>
