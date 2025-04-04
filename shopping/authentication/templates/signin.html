@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static}
+
+{% block title %}
+Login
+{% endblock %}
+
+{% block contact %}
+<div class="container d-flex justif-content aligh-items-center min-vh-100">
+    <div class="card shadow p-4">
+        <h2 class="mb-4 text-center">
+            Login
+        </h2>
+        <form method="post">
+            {% csrf_token %}
+            {% for field in form %}
+            <div class="mb-3">
+                <label for="{{field.id_for_lable}}" class="form_lable">{{}} </label>
+            </div>
+        </form>
+    </div>
+
+</div>
+
+{% endblock %}
