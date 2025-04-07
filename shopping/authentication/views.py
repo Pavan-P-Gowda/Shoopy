@@ -13,10 +13,10 @@ from django.contrib.auth.views import LoginView
 
 # Create your views here.
 class UserRegister(CreateView):
-    from_class = CustomRegisterForm
+    form_class = CustomRegisterForm
     template_name = 'signup.html'
     # find the sig-in page path on succeessfull registaion and sendd the useer there
-    success_url = reverse_lazy('singin')
+    success_url = reverse_lazy('signin')
 
 class UserLogin(LoginView):
     template_name = 'signin.html'
