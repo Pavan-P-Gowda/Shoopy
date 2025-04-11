@@ -57,6 +57,12 @@ body {
                 background-color: rgb(72, 195, 72);
             }
         }
+        .ser{
+            /* border: 2px solid black; */
+            /* padding-left: 10px; */
+            /* margin-left: 10px; */
+            /* border: 1px solid black; */
+        }   
     }
 
     main {
@@ -157,6 +163,8 @@ body {
         } */
 
         /* about page */
+        /* search edit  */
+        
     }
 
     footer {
