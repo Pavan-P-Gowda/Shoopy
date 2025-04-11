@@ -39,7 +39,7 @@
                 </p>
                 
             </div>
-            <a href="" class="btn btn-primary w-60 center">Add to cart</a>
+            <a href="{% url 'add_to_cart' product.pk %}" class="btn btn-primary w-60 center">Add to cart</a>
             <!-- .btn-primary - is a predefined button class that applies the primary theme color (blue) to a button -->
         </div>
         {% endfor %}

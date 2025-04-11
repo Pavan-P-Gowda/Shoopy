@@ -25,7 +25,7 @@ Details : {{product.name}}
                     <a href="{% url 'edit_product' product.pk %}" class="btn btn-secondary w-30 center">Edit Product</a>
                     <a href="{% url 'delete_product' product.pk %}" class="btn btn-danger w-60 center">Delete</a></p>
                 {% else %}
-                    <a href="" class="btn btn-primary w-30 center">Add to cart</a>
+                    <a href="{% url 'add_to_cart' product.pk %}" class="btn btn-primary w-30 center">Add to cart</a>
                 {% endif %}
                 <!-- <a href="{% url 'homepage' %}" class=" btn btn-outline-primary w-100 center">Go Back</a> -->
             </div>
