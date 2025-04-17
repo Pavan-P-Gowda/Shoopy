@@ -86,7 +86,7 @@ body {
                     height: 380px;
                     display: flex;
                     align-items: center;
-                    border-radius: 5px;
+                    border-radius:  5px;
                     z-index: 0;
                     position: static;
                     overflow: hidden;
@@ -100,6 +100,7 @@ body {
                             height: 150px;
                             object-fit: cover;
                             padding: 0;
+                            /* border-radius: 0px 5px; */
                             /* overflow: hidden; */
                             /* width: 200px; */
                             background-color: black;
