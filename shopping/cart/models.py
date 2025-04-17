@@ -18,5 +18,8 @@ class CartItem(models.Model):
     date_added = models.DateTimeField(auto_now_add=True)
     # currnt timestamp
 
+    def get_total(self):
+        return self.product.price * self.quantity
+
     def __str__(self):
         return f"{self.product.name} added by {self.user.username} at {self.date_added}"
