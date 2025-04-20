@@ -24,12 +24,20 @@
                 <td><img src="{{item.product.img.url}}" style="height: 20px;" alt="Image of {{item.product.name}}"></td>
                 <td>{{item.product.name}}</td>
                 <td>{{item.product.price}}</td>
-                <td>
-                    <button class="btn btn-outline-success">-</button>
-                    {{item.quantity}}
-                    <button class="btn btn-outline-success">+</button>
+                <td class="grid">
+                    <div class="row w-100">            
+                        <button onclick="updateCart('{% url 'rem_quantity' item.id %}', {{ item.id }}, false, '{{ csrf_token }}')" class="btn btn-outline-secondary col align-middle">
+                        -
+                        </button>
+                            <p id="quantity-{{ item.id }}" class="col align-middle text-center">{{item.quantity}}</p>
+                        <button onclick="updateCart('{% url 'add_quantity' item.id %}', {{ item.id }}, true, '{{ csrf_token }}')" class="btn btn-outline-secondary col align-middle">
+                        +
+                        </button>
+                    </div>
+                </td>   
+                <td id="total-price-{{ item.id }}">
+                    {{item.get_total}}
                 </td>
-                <td>{{item.get_total}}</td>
                 <td>
                     <a href="{% url 'rem_from_cart' item.id %}" class="btn btn-danger">Remove</a>
                 </td>
