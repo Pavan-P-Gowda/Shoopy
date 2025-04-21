@@ -54,11 +54,11 @@ def  addQuantity(request, cart_item_id):
     cart_item = get_object_or_404(CartItem, id=cart_item_id, user= request.user)
     cart_item.quantity += 1
     cart_item.save()
-    overall_total= sum(item.get_tottal() for item in CartItem.objects.filter(user=request.user))
+    overall_total= sum(item.get_total() for item in CartItem.objects.filter(user=request.user))
     context = {
         'quantity' : cart_item.quantity,
         'total_price' : cart_item.get_total(),
-        'over_all_total' : overall_total
+        'overall_total' : overall_total
     }
     return JsonResponse(context)
 
@@ -68,11 +68,11 @@ def remQuantity(request, cart_item_id):
     if cart_item.quantity > 1:
         cart_item.quantity -=1
         cart_item.save()
-        overall_total= sum(item.get_tottal() for item in CartItem.objects.filter(user=request.user))
+        overall_total= sum(item.get_total() for item in CartItem.objects.filter(user=request.user))
         context = {
         'quantity' : cart_item.quantity,
         'total_price' : cart_item.get_total(),
-        'over_all_total' : overall_total
+        'overall_total' : overall_total
         }
         return JsonResponse(context)
     else:
@@ -81,7 +81,7 @@ def remQuantity(request, cart_item_id):
         context = {
         'quantity' : 0,
         'total_price' : 0,
-        'over_all_total' : overall_total
+        'overall_total' : overall_total
         }
         return JsonResponse(context)
         

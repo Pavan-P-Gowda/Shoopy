@@ -19,7 +19,7 @@
         </thead>
         <tbody>
             {% for item in items %}
-            <tr>
+            <tr id="cart-item-{{item.id}}">
                 <td>{{item.id}}</td>
                 <td><img src="{{item.product.img.url}}" style="height: 20px;" alt="Image of {{item.product.name}}"></td>
                 <td>{{item.product.name}}</td>
@@ -53,7 +53,7 @@
                 <td></td>
                 <td></td>
                 <td></td>
-                <th>Total: {{total}} </th>
+                <th>Total: <span id="overall-total">{{total}}</span> </th>
                 <td>
                     <a href="" class="btn btn-info">Place your Order</a>
                 </td>
