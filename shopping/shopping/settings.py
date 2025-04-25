@@ -139,3 +139,16 @@ LOGIN_URL = 'signin'
 
 LOGIN_REDIRECT_URL = '/' # after succefull login it will go to homepage
 LOGOUT_REDIRECT_URL = '/' # after succefull logout it will go to homepage
+
+
+#Razorpay detalis 
+
+RAZORPAY_KEY_ID = 'rzp_test_i5mkBrXkWJZHYA'
+RAZORPAY_KEY_SECRET = 'kdrWXQSxACZwreWXNdAR2sy6'
+
+#it used for another website won't make any request to my website
+CSRF_TRUSTED_ORIGINS = [
+    'https://api.razorpay.com' , # add razorpay domin
+]
+TIME_ZONE = 'Asia/Kolkata' # it will change your loacl time zone 
+USE_TZ = True
