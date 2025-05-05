@@ -12,9 +12,9 @@ def homeView(request):
     template = loader.get_template('home.html')
     context = {
         # context data to be pulled from the db
-        'products' : Product.objects.all()
-        #the above line of the code is equivalent to Select * from product_table; 
-
+        'products' : Product.objects.all(),
+        #the above line of the code is equivalent to Select * from product_table;
+        'search_bar' : True
     }
     return HttpResponse(template.render(context, request))
 
@@ -61,3 +61,15 @@ class DeletProduct(DeleteView):
     model = Product
     template_name = 'delet_product.html'
     success_url = '/'
+
+def SearchView(request):
+    query = request.GET.get('search_text')
+
+    result_product = Product.objects.filter(name__icontains = query)
+    context = {
+        'prods' : result_product,
+        'query' : query,
+        'search_bar' : True
+    }
+    template = loader.get_template('search_result.html')
+    return HttpResponse(template.render(context,request))

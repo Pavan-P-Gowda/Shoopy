@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block title %}
+ Shoopy | Search for the {{query}}
+ {% endblock %}
+
+ {% block content %}
+ <span>This page is searched for {{query}}</span>
+<div class="container">
+    <div class="row">
+        {% for product in prods %}
+        <div class="col-sm-2 card text-center  mx-3 my-3 px-0">
+            <!-- 1.card - Main card container and creat card
+                2. shadow-sm -is a utility class that adds a small box shadow to elements
+                3.mx - is a spacing utility used to set horizontal margins (m for margin, x for horizontal ,y for vertical). -->
+            <div class="row h-50 w-100 px-0 mx-0">
+                <a href="{% url 'product_details' product.pk %}">
+                <img class=" w-100" src="{{product.img.url}}" alt="picture of {{product.name}}">
+                </a>
+                <!-- card-img-top - class in Bootstrap is used to place an image at the top of a card. -->
+            </div>
+            <div class="row card-body h-50">
+                <!-- card-body - Adds padding inside the card. helps in structuring the card's content. -->
+                <h5>
+                    <a href="{% url 'product_details' product.pk %}">{{product.name}}</a>
+                </h5>
+                <p class="card-text">
+                    <!-- card-text - It provides proper spacing and typography settings to make the text more readable. -->
+                    Rs. {{product.price}}
+                </p>
+                <p class="card-caption clamp">
+                    {{product.desc}}
+                </p>
+                
+            </div>
+            <a href="{% url 'add_to_cart' product.pk %}" class="btn btn-primary w-60 center">Add to cart</a>
+            <!-- .btn-primary - is a predefined button class that applies the primary theme color (blue) to a button -->
+        </div>
+        {% empty %}
+        <span>Result not found</span>
+        {% endfor %}
+
+    </div>
+
+</div>
+ {% endblock %}
