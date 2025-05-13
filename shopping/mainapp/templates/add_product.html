@@ -7,7 +7,7 @@ Add products
 
 <div>
     <form method="post" enctype="multipart/form-data">
-        {% csrf_token %}
+        {% csrf_token %} <!-- Must be inside the form  it will proctect from the hackers and others-->
         {{form.as_p}}   
         <!--  form - is importing from models everything 
           each attribut is from the module it will come inside this as paragraph -->
